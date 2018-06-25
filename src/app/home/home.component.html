@@ -1,8 +1,37 @@
-<p>
-  home works!
-</p>
+<div class="row profileContainer">
+  <div class="col-md-1">
+    <div>
+      <img src="../../assets/profile.jfif" alt="image_Profile" class="imageProfile" >
+    </div>
+  </div>
+
+  <div class="col-md-11">
+
+  </div>
+</div>
+
+
+
+<div class="col-md-12" style="background: blue; padding-top: 5px; margin-top: 2px;">
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-11">
+      <form>
+          <div class="form-group" style="padding: 5px;">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Buscar un contacto o un número">
+          </div>
+      </form>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
 
 
 <ul>
   <li routerLink="/conversation/{{user.userId}}" *ngFor="let user of users"> {{user.nick}} </li>
 </ul>
+
+

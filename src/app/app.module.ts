@@ -5,6 +5,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ConversationComponent } from './conversation/conversation.component';
 
+//#region @angular Material Desing
+
+import { MatButtonModule } from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+//#endregion
 //#region 
 
 import { Routes, RouterModule } from '@angular/router';
@@ -30,8 +36,12 @@ const appRoutes : Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatButtonModule,
+    MatToolbarModule
     ],
+    exports: [MatButtonModule,MatToolbarModule],
+
   providers: [],
   bootstrap: [AppComponent]
 })
