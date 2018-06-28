@@ -1,7 +1,15 @@
-<nav class="nav backgroundMenu">
-    <a class="nav-link active textColorMenu" href="#"><img src="../assets/logo_live.png" alt="logo_live" class="imageLogo"/>  MSN Alive!</a>
+<div  [ngClass]="{'Background' : (router.url == '/Login') }">
+
+<nav class="nav backgroundMenu" *ngIf="router.url != '/Login'  && router.url != '/Register'  ">
+    <a class="nav-link active textColorMenu" routerLink="Home"><img src="../assets/logo_live.png" alt="logo_live" class="imageLogo"/>  MSN Alive!</a>
     <a class="nav-link textColorMenu" href="#" style="margin-top: 3px;">Configuración</a>
     <a class="nav-link textColorMenu" href="#" style="margin-top: 3px;">Acerca De</a>
 </nav>
 
-<router-outlet></router-outlet>
+<div class="container-fluid">
+
+    <router-outlet></router-outlet>
+
+</div>
+
+</div>
